@@ -4,16 +4,18 @@ project(clang-refac CXX)
 set(PROJECT_DESCRIPTION
     "A Clang/LibTooling-based tool for refactoring C++ code.")
 
+set(CMAKE_DIR "cmake")
 set(BIN_DIR "bin")
 set(SRC_DIR "src")
+set(INCLUDE_DIR "src")
 set(DOC_DIR "doc")
 set(UTILS_DIR "utils")
 
 set(DOC_TARGET "doc")
 set(DISTCLEAN_TARGET "distclean")
 set(WHAT_TARGET "what")
-set(LIB_TARGET "lib")
-set(BIN_TARGET "zfs")
+set(BIN_TARGET "clang-refac")
+set(BIN_NAME "clang-refac")
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${LIB_DIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${LIB_DIR})
