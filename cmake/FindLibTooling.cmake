@@ -62,7 +62,6 @@ include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args(LibTooling
     REQUIRED_VARS LIBTOOLING_LIBRARY LIBTOOLING_INCLUDE_DIR
     VERSION_VAR LIBTOOLING_VERSION)
-mark_as_advanced(LIBTOOLING_FOUND LIBTOOLING_LIBRARY LIBTOOLING_INCLUDE_DIR)
 
 # Save vars to cache that should be user-modifiable
 set(LIBTOOLING_FOUND ${LIBTOOLING_FOUND}
@@ -71,3 +70,4 @@ set(LIBTOOLING_LIBRARY ${LIBTOOLING_LIBRARY}
     CACHE FILEPATH "The LibTooling libraries.")
 set(LIBTOOLING_INCLUDE_DIR ${LIBTOOLING_INCLUDE_DIR}
     CACHE FILEPATH "The LibTooling include directory.")
+mark_as_advanced(LIBTOOLING_FOUND LIBTOOLING_LIBRARY LIBTOOLING_INCLUDE_DIR)
