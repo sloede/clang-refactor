@@ -8,7 +8,6 @@ project(clang-refactor CXX)
 set(PROJECT_DESCRIPTION
     "A Clang/LibTooling-based tool for refactoring C++ code.")
 
-
 ################################################################################
 # Configure paths - note that if you change any of them, you might need to
 # change stuff in the utility scripts or the documentation as well
@@ -36,6 +35,10 @@ set(BIN_TARGET "clang-refactor")
 # Configure output names
 set(BIN_NAME "clang-refactor")
 
+################################################################################
+# Set LLVM/clang's LibToolig minimum version
+set(LIBTOOLING_MINIMUM_VERSION "3.4")
+
 
 ################################################################################
 # NO NEED TO CHANGE ANYTHING BEYOND THIS LINE
@@ -49,9 +52,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${BIN_DIR})
 set(SRC_DIR_ABS ${CMAKE_SOURCE_DIR}/${SRC_DIR})
 set(UTILS_DIR_ABS ${CMAKE_SOURCE_DIR}/${UTILS_DIR})
 
-# Get LLVM include dir
-include(FindLibTooling)
-find_package(LibTooling)
+# Find clang's LibTooling
+find_package(LibTooling ${LIBTOOLING_MINIMUM_VERSION} REQUIRED)
 
-
-#add_subdirectory(${SRC_DIR_ABS})
+# Add all directories with own CMake files
+add_subdirectory(${SRC_DIR_ABS})
