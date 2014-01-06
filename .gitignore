@@ -11,3 +11,6 @@
 *.lai
 *.la
 *.a
+
+# In-source build directory
+build
