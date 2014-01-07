@@ -10,12 +10,30 @@
 
 # Set the libraries that need to be found:
 set(LIBTOOLING_REQUIRED_LIBRARIES
-    "clangTooling" "clangFrontend" "clangSerialization" "clangDriver"
-    "clangRewriteFrontend" "clangRewriteCore" "clangParse" "clangSema"
-    "clangAnalysis" "clangAST" "clangASTMatchers" "clangEdit" "clangLex"
+    "clangTooling"
+    "clangFrontend"
+    "clangSerialization"
+    "clangDriver"
+    "clangRewriteFrontend"
+    "clangRewriteCore"
+    "clangParse"
+    "clangSema"
+    "clangAnalysis"
+    "clangAST"
+    "clangASTMatchers"
+    "clangEdit"
+    "clangLex"
     "clangBasic"
-    "LLVMCore" "LLVMOption" "LLVMMC" "LLVMObject" "LLVMBitReader"
-    "LLVMSupport" "LLVMAsmParser" "LLVMMCParser" "LLVMTransformUtils")
+    "LLVMBitReader"
+    "LLVMAsmParser"
+    "LLVMMCParser"
+    "LLVMTransformUtils"
+    "LLVMOption"
+    "LLVMMC"
+    "LLVMObject"
+    "LLVMCore"
+    "LLVMSupport"
+)
 
 # First, find LLVM by way of the `llvm-config` executable
 if(NOT LLVM_CONFIG_EXECUTABLE)
