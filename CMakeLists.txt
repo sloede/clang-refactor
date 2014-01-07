@@ -44,7 +44,7 @@ set(LIBTOOLING_MINIMUM_VERSION "3.4")
 # NO NEED TO CHANGE ANYTHING BEYOND THIS LINE
 ################################################################################
 
-
+# Set paths
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_SOURCE_DIR}/${CMAKE_DIR})
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${LIB_DIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${LIB_DIR})
@@ -52,7 +52,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/${BIN_DIR})
 set(SRC_DIR_ABS ${CMAKE_SOURCE_DIR}/${SRC_DIR})
 set(UTILS_DIR_ABS ${CMAKE_SOURCE_DIR}/${UTILS_DIR})
 
-# Find clang's LibTooling
+# Find LLVM/clang's LibTooling
 find_package(LibTooling ${LIBTOOLING_MINIMUM_VERSION} REQUIRED)
 
 # Add all directories with own CMake files
